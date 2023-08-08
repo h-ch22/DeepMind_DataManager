@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DeepMindDataManager (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DeepMindDataManager (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

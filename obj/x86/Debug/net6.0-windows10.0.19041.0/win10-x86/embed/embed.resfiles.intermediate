@@ -1,0 +1,5 @@
+App.xbf
+src\DataCheck\View\DataCheckView.xbf
+src\Frameworks\View\MainWindow.xbf
+src\Labeling\View\LabelingView.xbf
+src\Settings\View\SettingsView.xbf

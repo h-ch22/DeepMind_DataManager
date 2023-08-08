@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="DeepMindDataManager.src.Labeling.View.LabelingView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DeepMindDataManager.src.Labeling.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Margin="55,0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="txt_noDirectory" Text="레이블링을 진행하려면 설정에서 데이터 경로를 지정하십시오."/>
+
+        <Grid x:Name="mainView">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+
+                <TextBlock x:Name="txt_fileName" Foreground="Gray"/>
+                <Image x:Name="img_data" Width="500" Height="500"/>
+
+            </StackPanel>
+
+            <ScrollViewer Height="500" VerticalScrollMode="Enabled" Grid.Column="1" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto" IsVerticalScrollChainingEnabled="True" IsTabStop="True">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel HorizontalAlignment="Right" Height="50" Orientation="Horizontal">
+                            <RadioButton x:Name="radioBtn_CL01" IsChecked="True" Checked="onRadioButtonStateChanged">CL01</RadioButton>
+                            <RadioButton x:Name="radioBtn_CL02" Checked="onRadioButtonStateChanged">CL02</RadioButton>
+                            <RadioButton x:Name="radioBtn_CL03" Checked="onRadioButtonStateChanged">CL03</RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical">
+                            <Border Width="1200" Height="450" Background="{ThemeResource LayerFillColorDefaultBrush}"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="16"
+                            CornerRadius="8"
+                            BorderThickness="1"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                                <StackPanel Orientation="Vertical" Padding="5">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold">이 파일에서 다음의 증상이 보였나요?</TextBlock>
+
+                                    
+
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+
+            </ScrollViewer>
+            
+        </Grid>
+
+    </StackPanel>
+</Page>

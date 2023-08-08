@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</Source>
+    <SmallTileSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</SmallTileSource>
+    <MediumTileSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</MediumTileSource>
+    <WideTileSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</WideTileSource>
+    <LargeTileSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</LargeTileSource>
+    <AppIconSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</AppIconSource>
+    <SplashScreenSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</PackageLogoSource>
+    <BadgeLogoSource>C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\Assets\ic_deepMind.png</BadgeLogoSource>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Update="src\Settings\View\SettingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="src\DataCheck\View\DataCheckView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="src\Labeling\View\LabelingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
