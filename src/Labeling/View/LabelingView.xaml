@@ -8,25 +8,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Margin="55,0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <StackPanel x:Name="LabelingPanel" Margin="55,0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
 
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="txt_noDirectory" Text="레이블링을 진행하려면 설정에서 데이터 경로를 지정하십시오."/>
-
-        <Grid x:Name="mainView">
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="txt_noDirectory" Text="레이블링을 진행하려면 설정에서 데이터 경로와 모델 파일의 경로를 지정하십시오."/>
+        <ProgressRing VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="progressView" Visibility="{Binding isPredicting}"/>
+        
+        
+        <Grid x:Name="mainView" Visibility="{Binding showMainView}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-
+            
             <StackPanel Grid.Column="0" Orientation="Vertical">
 
                 <TextBlock x:Name="txt_fileName" Foreground="Gray"/>
-                <Image x:Name="img_data" Width="500" Height="500"/>
+                <Image x:Name="img_data" Width="500" Height="500" Margin="0, 10, 0, 0"/>
 
             </StackPanel>
 
             <ScrollViewer Height="500" VerticalScrollMode="Enabled" Grid.Column="1" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto" IsVerticalScrollChainingEnabled="True" IsTabStop="True">
-                <StackPanel Orientation="Vertical">
+                <StackPanel Padding="20" MaxWidth="500" Orientation="Vertical">
                     <StackPanel Orientation="Vertical">
                         <StackPanel HorizontalAlignment="Right" Height="50" Orientation="Horizontal">
                             <RadioButton x:Name="radioBtn_CL01" IsChecked="True" Checked="onRadioButtonStateChanged">CL01</RadioButton>
@@ -34,29 +36,42 @@
                             <RadioButton x:Name="radioBtn_CL03" Checked="onRadioButtonStateChanged">CL03</RadioButton>
                         </StackPanel>
 
-                        <StackPanel Orientation="Vertical">
-                            <Border Width="1200" Height="450" Background="{ThemeResource LayerFillColorDefaultBrush}"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left"
-                            Margin="16"
-                            CornerRadius="8"
-                            BorderThickness="1"
-                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
-                                <StackPanel Orientation="Vertical" Padding="5">
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold">이 파일에서 다음의 증상이 보였나요?</TextBlock>
+                        <Expander MinWidth="300" Header="공통" Padding="10" IsExpanded="True">
+                            <StackPanel Orientation="Vertical">
+                                <CheckBox x:Name="item1" Content="1"/>
+                                <CheckBox x:Name="item2" Content="2"/>
+                            </StackPanel>
 
-                                    
+                        </Expander>
 
-                                </StackPanel>
-                            </Border>
-                        </StackPanel>
+                        <Expander MinWidth="300" Header="집 - 지붕" Padding="10" Margin="0, 10, 0, 0">
+                            <StackPanel Orientation="Vertical">
+                                <CheckBox x:Name="item1_1" Content="1"/>
+                                <CheckBox x:Name="item1_2" Content="2"/>
+                            </StackPanel>
+
+                        </Expander>
+
+                        <Grid Padding="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button Grid.Column="0" x:Name="btn_Previous" Content="이전" HorizontalAlignment="Left" Click="onBtnClick"/>
+
+                            <Button Grid.Column="1" Click="onBtnClick" x:Name="btn_Next" Content="다음" HorizontalAlignment="Right" Foreground="{ThemeResource TextOnAccentAAFillColorPrimary}" Background="{ThemeResource AccentAAFillColorDefaultBrush}"/>
+
+                        </Grid>
+
                     </StackPanel>
-                </StackPanel>
 
+                </StackPanel>
 
             </ScrollViewer>
             
         </Grid>
 
     </StackPanel>
+    
 </Page>

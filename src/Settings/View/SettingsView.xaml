@@ -14,8 +14,14 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-        </Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
 
+        </Grid.RowDefinitions>
+    
         <Grid Grid.Row="0" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -31,7 +37,7 @@
 
             <Grid Grid.Column="1">
                 
-                <Button x:Name="btn_setData_CL01" Content="경로 설정" HorizontalAlignment="Right" Click="onCL01BtnCliick"/>
+                <Button x:Name="btn_setData_CL01" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
 
             </Grid>
 
@@ -52,7 +58,7 @@
 
             <Grid Grid.Column="1">
 
-                <Button x:Name="btn_setData_CL02" Content="경로 설정" HorizontalAlignment="Right" Click="onCL02BtnClick"/>
+                <Button x:Name="btn_setData_CL02" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
 
             </Grid>
 
@@ -73,13 +79,118 @@
 
             <Grid Grid.Column="1">
 
-                <Button x:Name="btn_setData_CL03" Content="경로 설정" HorizontalAlignment="Right" Click="onCL03BtnClick"/>
+                <Button x:Name="btn_setData_CL03" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
 
             </Grid>
 
         </Grid>
 
-        <Grid Grid.Row="3" HorizontalAlignment="Left">
+        <Grid Grid.Row="3" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <TextBlock Text="모델 경로 설정 (CL01)" FontWeight="Bold"/>
+                    <TextBlock x:Name="txt_ML01_directory" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Button x:Name="btn_setData_ML01" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="4" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <TextBlock Text="모델 경로 설정 (CL02)" FontWeight="Bold"/>
+                    <TextBlock x:Name="txt_ML02_directory" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Button x:Name="btn_setData_ML02" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="5" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <TextBlock Text="모델 경로 설정 (CL03)" FontWeight="Bold"/>
+                    <TextBlock x:Name="txt_ML03_directory" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Button x:Name="btn_setData_ML03" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="6" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <TextBlock Text="Executable Python 경로 설정" FontWeight="Bold"/>
+                    <TextBlock x:Name="txt_Python_directory" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Button x:Name="btn_setData_Python" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="7" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <TextBlock Text="Python 스크립트 경로 설정" FontWeight="Bold"/>
+                    <TextBlock x:Name="txt_script_directory" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Button x:Name="btn_setData_Script" Content="경로 설정" HorizontalAlignment="Right" Click="onBtnClick"/>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="8" HorizontalAlignment="Left">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="앱 정보" FontWeight="Bold"/>
                 <TextBlock Margin="0,20,0,0" Text="DeepMind 데이터 관리 시스템 1.0.0"/>

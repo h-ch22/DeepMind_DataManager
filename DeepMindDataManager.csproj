@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\Frameworks\Helper\" />
-    <Folder Include="src\Frameworks\View\" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="src\Settings\View\SettingsView.xaml">

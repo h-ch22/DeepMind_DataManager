@@ -224,7 +224,7 @@ namespace DeepMindDataManager.DeepMindDataManager_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[40];
+            _typeNameTable = new string[45];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -263,10 +263,15 @@ namespace DeepMindDataManager.DeepMindDataManager_XamlTypeInfo
             _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.Control";
             _typeNameTable[36] = "DeepMindDataManager.MainWindow";
             _typeNameTable[37] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[38] = "DeepMindDataManager.src.Labeling.View.LabelingView";
-            _typeNameTable[39] = "DeepMindDataManager.src.Settings.View.SettingsView";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.ProgressRing";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.Expander";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.ExpandDirection";
+            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings";
+            _typeNameTable[43] = "DeepMindDataManager.src.Labeling.View.LabelingView";
+            _typeNameTable[44] = "DeepMindDataManager.src.Settings.View.SettingsView";
 
-            _typeTable = new global::System.Type[40];
+            _typeTable = new global::System.Type[45];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -305,8 +310,13 @@ namespace DeepMindDataManager.DeepMindDataManager_XamlTypeInfo
             _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
             _typeTable[36] = typeof(global::DeepMindDataManager.MainWindow);
             _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[38] = typeof(global::DeepMindDataManager.src.Labeling.View.LabelingView);
-            _typeTable[39] = typeof(global::DeepMindDataManager.src.Settings.View.SettingsView);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRing);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.Expander);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.ExpandDirection);
+            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings);
+            _typeTable[43] = typeof(global::DeepMindDataManager.src.Labeling.View.LabelingView);
+            _typeTable[44] = typeof(global::DeepMindDataManager.src.Settings.View.SettingsView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -349,8 +359,10 @@ namespace DeepMindDataManager.DeepMindDataManager_XamlTypeInfo
         private object Activate_31_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
         private object Activate_34_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
         private object Activate_36_MainWindow() { return new global::DeepMindDataManager.MainWindow(); }
-        private object Activate_38_LabelingView() { return new global::DeepMindDataManager.src.Labeling.View.LabelingView(); }
-        private object Activate_39_SettingsView() { return new global::DeepMindDataManager.src.Settings.View.SettingsView(); }
+        private object Activate_38_ProgressRing() { return new global::Microsoft.UI.Xaml.Controls.ProgressRing(); }
+        private object Activate_40_Expander() { return new global::Microsoft.UI.Xaml.Controls.Expander(); }
+        private object Activate_43_LabelingView() { return new global::DeepMindDataManager.src.Labeling.View.LabelingView(); }
+        private object Activate_44_SettingsView() { return new global::DeepMindDataManager.src.Settings.View.SettingsView(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -628,16 +640,59 @@ namespace DeepMindDataManager.DeepMindDataManager_XamlTypeInfo
                 xamlType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 38:   //  DeepMindDataManager.src.Labeling.View.LabelingView
+            case 38:   //  Microsoft.UI.Xaml.Controls.ProgressRing
+                userType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_38_ProgressRing;
+                userType.AddMemberName("IsActive");
+                userType.AddMemberName("IsIndeterminate");
+                userType.AddMemberName("Maximum");
+                userType.AddMemberName("Minimum");
+                userType.AddMemberName("TemplateSettings");
+                userType.AddMemberName("Value");
+                xamlType = userType;
+                break;
+
+            case 39:   //  Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings
+                userType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 40:   //  Microsoft.UI.Xaml.Controls.Expander
+                userType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
+                userType.Activator = Activate_40_Expander;
+                userType.AddMemberName("Header");
+                userType.AddMemberName("IsExpanded");
+                userType.AddMemberName("ExpandDirection");
+                userType.AddMemberName("HeaderTemplate");
+                userType.AddMemberName("HeaderTemplateSelector");
+                userType.AddMemberName("TemplateSettings");
+                xamlType = userType;
+                break;
+
+            case 41:   //  Microsoft.UI.Xaml.Controls.ExpandDirection
+                userType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Down", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Down);
+                userType.AddEnumValue("Up", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Up);
+                xamlType = userType;
+                break;
+
+            case 42:   //  Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings
+                userType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 43:   //  DeepMindDataManager.src.Labeling.View.LabelingView
                 userType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_38_LabelingView;
+                userType.Activator = Activate_43_LabelingView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  DeepMindDataManager.src.Settings.View.SettingsView
+            case 44:   //  DeepMindDataManager.src.Settings.View.SettingsView
                 userType = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_39_SettingsView;
+                userType.Activator = Activate_44_SettingsView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1155,6 +1210,116 @@ namespace DeepMindDataManager.DeepMindDataManager_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase)instance;
             that.IsSelected = (global::System.Boolean)Value;
         }
+        private object get_49_ProgressRing_IsActive(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.IsActive;
+        }
+        private void set_49_ProgressRing_IsActive(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.IsActive = (global::System.Boolean)Value;
+        }
+        private object get_50_ProgressRing_IsIndeterminate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.IsIndeterminate;
+        }
+        private void set_50_ProgressRing_IsIndeterminate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.IsIndeterminate = (global::System.Boolean)Value;
+        }
+        private object get_51_ProgressRing_Maximum(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.Maximum;
+        }
+        private void set_51_ProgressRing_Maximum(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.Maximum = (global::System.Double)Value;
+        }
+        private object get_52_ProgressRing_Minimum(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.Minimum;
+        }
+        private void set_52_ProgressRing_Minimum(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.Minimum = (global::System.Double)Value;
+        }
+        private object get_53_ProgressRing_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.TemplateSettings;
+        }
+        private object get_54_ProgressRing_Value(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.Value;
+        }
+        private void set_54_ProgressRing_Value(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.Value = (global::System.Double)Value;
+        }
+        private object get_55_Expander_Header(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.Header;
+        }
+        private void set_55_Expander_Header(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_56_Expander_IsExpanded(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.IsExpanded;
+        }
+        private void set_56_Expander_IsExpanded(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.IsExpanded = (global::System.Boolean)Value;
+        }
+        private object get_57_Expander_ExpandDirection(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.ExpandDirection;
+        }
+        private void set_57_Expander_ExpandDirection(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.ExpandDirection = (global::Microsoft.UI.Xaml.Controls.ExpandDirection)Value;
+        }
+        private object get_58_Expander_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_58_Expander_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_59_Expander_HeaderTemplateSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.HeaderTemplateSelector;
+        }
+        private void set_59_Expander_HeaderTemplateSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.HeaderTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+        }
+        private object get_60_Expander_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.TemplateSettings;
+        }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -1505,6 +1670,88 @@ namespace DeepMindDataManager.DeepMindDataManager_XamlTypeInfo
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_48_NavigationViewItemBase_IsSelected;
                 xamlMember.Setter = set_48_NavigationViewItemBase_IsSelected;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.IsActive":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "IsActive", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_49_ProgressRing_IsActive;
+                xamlMember.Setter = set_49_ProgressRing_IsActive;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.IsIndeterminate":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "IsIndeterminate", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_50_ProgressRing_IsIndeterminate;
+                xamlMember.Setter = set_50_ProgressRing_IsIndeterminate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.Maximum":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "Maximum", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_51_ProgressRing_Maximum;
+                xamlMember.Setter = set_51_ProgressRing_Maximum;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.Minimum":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "Minimum", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_52_ProgressRing_Minimum;
+                xamlMember.Setter = set_52_ProgressRing_Minimum;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.TemplateSettings":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings");
+                xamlMember.Getter = get_53_ProgressRing_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.Value":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "Value", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_54_ProgressRing_Value;
+                xamlMember.Setter = set_54_ProgressRing_Value;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.Header":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_55_Expander_Header;
+                xamlMember.Setter = set_55_Expander_Header;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.IsExpanded":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_56_Expander_IsExpanded;
+                xamlMember.Setter = set_56_Expander_IsExpanded;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.ExpandDirection":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "ExpandDirection", "Microsoft.UI.Xaml.Controls.ExpandDirection");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_57_Expander_ExpandDirection;
+                xamlMember.Setter = set_57_Expander_ExpandDirection;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplate":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_58_Expander_HeaderTemplate;
+                xamlMember.Setter = set_58_Expander_HeaderTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplateSelector":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "HeaderTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_59_Expander_HeaderTemplateSelector;
+                xamlMember.Setter = set_59_Expander_HeaderTemplateSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.TemplateSettings":
+                userType = (global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::DeepMindDataManager.DeepMindDataManager_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings");
+                xamlMember.Getter = get_60_Expander_TemplateSettings;
+                xamlMember.SetIsReadOnly();
                 break;
             }
             return xamlMember;

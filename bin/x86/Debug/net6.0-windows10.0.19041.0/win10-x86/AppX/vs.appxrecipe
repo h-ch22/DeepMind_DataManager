@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-08-08T06:29:24.974</Modified>
+      <Modified>2023-08-09T07:58:25.824</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-08-08T06:29:24.819</Modified>
+      <Modified>2023-08-09T07:58:25.682</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\DeepMindDataManager.runtimeconfig.json">
       <PackagePath>DeepMindDataManager.runtimeconfig.json</PackagePath>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\DeepMindDataManager.dll">
       <PackagePath>DeepMindDataManager.dll</PackagePath>
-      <Modified>2023-08-08T06:29:24.725</Modified>
+      <Modified>2023-08-09T07:58:25.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>DeepMindDataManager.exe</PackagePath>
-      <Modified>2023-08-08T06:29:24.729</Modified>
+      <Modified>2023-08-09T07:58:25.597</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Desktop\2023\DeepMind\src\DataManager\DeepMindDataManager\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\DeepMindDataManager.deps.json">
       <PackagePath>DeepMindDataManager.deps.json</PackagePath>
-      <Modified>2023-08-08T04:17:54.846</Modified>
+      <Modified>2023-08-09T06:55:06.154</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.20\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
